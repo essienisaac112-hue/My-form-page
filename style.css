@@ -1,0 +1,359 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #242424;
+    background: #fffdf9;
+    line-height: 1.6;
+}
+
+.hero {
+    min-height: 480px;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(20, 15, 10, 0.88),
+        rgba(20, 15, 10, 0.35)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 24px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar h2 {
+    font-size: 23px;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 9px 18px;
+    border-radius: 7px;
+}
+
+.hero-content {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 5% 90px;
+}
+
+.tagline,
+.eyebrow {
+    color: #e66c35;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 7vw, 68px);
+    line-height: 1.1;
+    margin: 18px 0;
+}
+
+.hero-content > p:not(.tagline) {
+    max-width: 450px;
+    color: #f0f0f0;
+    margin-bottom: 28px;
+}
+
+.main-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #e66c35;
+    color: white;
+    padding: 13px 23px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 75px 5%;
+}
+
+.section-title {
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.section-description {
+    color: #737373;
+    margin-bottom: 30px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.food-card {
+    background: white;
+    border: 1px solid #eee8e2;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.food-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.food-info {
+    padding: 17px;
+}
+
+.food-info h3 {
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.food-info p {
+    color: #737373;
+    font-size: 13px;
+    min-height: 42px;
+    margin-bottom: 18px;
+}
+
+.food-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.food-bottom strong {
+    color: #d95826;
+    font-size: 19px;
+}
+
+.food-bottom label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.quantity {
+    width: 75px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.order-section {
+    background: #f6f1eb;
+    padding: 70px 5%;
+}
+
+.order-container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 32px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.order-heading {
+    margin-bottom: 25px;
+}
+
+.order-heading h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin: 9px 0;
+}
+
+.order-heading > p:last-child {
+    color: #737373;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    font: inherit;
+    font-size: 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: 2px solid #e66c35;
+    border-color: transparent;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.order-summary {
+    background: #fff8f2;
+    border: 1px solid #f0e1d4;
+    padding: 20px;
+    border-radius: 9px;
+    margin: 25px 0;
+}
+
+.order-summary h3 {
+    margin-bottom: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 9px 0;
+    font-size: 14px;
+}
+
+.empty-message,
+.delivery-note,
+.form-note {
+    color: #777;
+    font-size: 13px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e6d7ca;
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 19px;
+}
+
+.total-row strong {
+    color: #d95826;
+}
+
+.delivery-note {
+    margin-top: 12px;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    border: none;
+    background: #168b50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    background: #116c3e;
+}
+
+.whatsapp-btn:focus-visible,
+.main-btn:focus-visible,
+.nav-btn:focus-visible {
+    outline: 3px solid #e66c35;
+    outline-offset: 3px;
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 12px;
+}
+
+#formMessage {
+    margin-top: 12px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    background: #211b17;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer p {
+    color: #c9c1bb;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+    .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h2 {
+        font-size: 18px;
+    }
+
+    .hero-content {
+        padding-top: 50px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .food-grid {
+        gap: 12px;
+    }
+
+    .food-card img {
+        height: 130px;
+    }
+
+    .food-info {
+        padding: 12px;
+    }
+
+    .food-info h3 {
+        font-size: 16px;
+    }
+
+    .order-container {
+        padding: 21px 16px;
+    }
+}
